@@ -2,8 +2,8 @@
     position: relative;
     height: 95vh;
     background-image: linear-gradient(to bottom right, 
-    rgba($color-primary, 0.8), 
-    rgba($color-secondary, 0.8)), url(../img/hero.png);
+    rgba($color-primary, 0.5), 
+    rgba($color-secondary, 0.5)), url(../img/hero.png);
     background-size: contain;
     background-position: top;
     /* Determines how image is cropped on resize */
