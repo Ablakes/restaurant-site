@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 10px; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  /* Put the font info in body because it is more effecient. The body is the parent tag to all other tags so they will inherit whatever font the body has. */
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3.0rem; }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff;
+  backface-visibility: hidden;
+  /* This can eliminate funky effects in the animation */
+  margin-bottom: 5rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    font-weight: 400;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out; }
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, #7ed56f, #28b485);
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent; }
+  .heading-secondary:hover {
+    transform: skewX(3deg) skewY(-10deg) scale(1.1);
+    text-shadow: 10px 12px 25px rgba(0, 0, 0, 0.486);
+    transition: 1s; }
+
+.heading-tertiary {
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+
+.btn:link, .btn:visited {
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  transition: all .2s;
+  /* this sets the transition time for all animations on btn:link */ }
+
+.btn--white {
+  color: #777;
+  background-color: #FFF;
+  border-radius: 10rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-left: -2.2rem; }
+
+.btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .75s ease-out .5s;
+  animation-fill-mode: backwards; }
+
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #789A40;
+  padding: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid #789A40; }
+
+.btn-text:hover {
+  background-color: #28b485;
+  color: #FFF;
+  transform: translateY(-3px);
+  transition: all .5s;
+  box-shadow: 0px 0.7rem 1.8rem rgba(0, 0, 0, 0.3); }
+
+.btn-text:active {
+  box-shadow: 0px 0.2rem 0.2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: all .1s; }
+
+.row {
+  width: 122rem;
+  background-color: blue;
+  margin: 0 auto; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 5rem; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .row .col-1-of-4 {
+    width: calc((100% - (3 * 5rem)) / 4);
+    background-color: red; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, rgba(120, 154, 64, 0.8), rgba(0, 99, 91, 0.8)), url(../img/hero.png);
+  background-size: contain;
+  background-position: top;
+  /* Determines how image is cropped on resize */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 95vh); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 8.5rem;
+    /* If you just set the height, the width with be scaled accordingly */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* This is how we center our h1 text - this property is in relation to the element itself, whereas the absolute positioning is based upon the parent element's size */
+    text-align: center; }
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 400; }
+  .paragraph:not(:last-child) {
+    padding-bottom: 3rem; }

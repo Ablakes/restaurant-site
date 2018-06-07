@@ -1,0 +1,58 @@
+body {
+    /* Put the font info in body because it is more effecient. The body is the parent tag to all other tags so they will inherit whatever font the body has. */
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3.0rem;
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    color: #fff;
+    backface-visibility: hidden;
+    /* This can eliminate funky effects in the animation */
+    margin-bottom: 5rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        letter-spacing: 3rem;
+        font-weight: 400;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.5rem;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.heading-secondary {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    &:hover {
+        transform: skewX(3deg) skewY(-10deg) scale(1.1);
+        text-shadow: 10px 12px 25px  rgba(0, 0, 0, 0.486);
+        transition: 1s;       
+    }
+}
+
+.heading-tertiary {
+    text-transform: uppercase;
+    backface-visibility: hidden;   
+}

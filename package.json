@@ -1,0 +1,23 @@
+{
+  "name": "restaurant-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ablakes/restaurant-site.git"
+  },
+  "author": "Alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ablakes/restaurant-site/issues"
+  },
+  "homepage": "https://github.com/Ablakes/restaurant-site#readme"
+}
