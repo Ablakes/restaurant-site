@@ -38,7 +38,7 @@ body {
 .heading-secondary {
     text-transform: uppercase;
     font-weight: 700;
-    background-image: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+    background-image: linear-gradient(to bottom right, $color-secondary-light 40%, $color-secondary);
     font-size: 3.5rem;
     line-height: 3.5rem;
     display: inline-block;
@@ -54,7 +54,7 @@ body {
 
 .heading-tertiary {
     text-transform: uppercase;
-    backface-visibility: hidden;   
+    backface-visibility: hidden;  
 }
 
 .paragraph {

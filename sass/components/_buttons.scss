@@ -20,10 +20,11 @@
     }
     &--primary{
         color: $color-white;
-        background-color: $color-secondary;
+        background-image: linear-gradient($color-secondary-light, $color-secondary);
         border-radius: 10rem;
         font-weight: 400;
         font-size: 1.8rem;
+        letter-spacing: .15rem;
         margin-left: -2.2rem;
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.336);
     }
