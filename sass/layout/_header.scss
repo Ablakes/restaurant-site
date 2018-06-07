@@ -2,9 +2,9 @@
     position: relative;
     height: 95vh;
     background-image: linear-gradient(to bottom right, 
-    rgba($color-primary, 0.5), 
-    rgba($color-secondary, 0.5)), url(../img/hero.png);
-    background-size: contain;
+    rgba($color-black, .4), 
+    rgba($color-black, 0.2)), url(../img/hero.png);
+    background-size: cover;
     background-position: top;
     /* Determines how image is cropped on resize */
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 95vh);
@@ -27,14 +27,5 @@
         transform: translate(-50%, -50%);
         /* This is how we center our h1 text - this property is in relation to the element itself, whereas the absolute positioning is based upon the parent element's size */
         text-align: center;
-    }
-}
-
-.paragraph {
-    font-size: $default-font-size;
-    font-weight: 400;
-
-    &:not(:last-child) {
-        padding-bottom: 3rem;
     }
 }
