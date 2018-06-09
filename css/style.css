@@ -1,3 +1,99 @@
+@keyframes spin-in-col-1 {
+  0% {
+    transform: translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  5% {
+    transform: translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  6% {
+    opacity: 1; }
+  10% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; } }
+
+@keyframes spin-out-col-1 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  10% {
+    transform: translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2); }
+  100% {
+    transform: translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+
+@keyframes spin-in-col-2 {
+  0% {
+    transform: translateX(-2vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  5% {
+    transform: translateX(-2vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  6% {
+    opacity: 1; }
+  10% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; } }
+
+@keyframes spin-out-col-2 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  10% {
+    transform: translateX(5vw) rotate(90deg) rotateY(-180deg) scale(2); }
+  100% {
+    transform: translateX(5vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+
+@keyframes spin-in-col-3 {
+  0% {
+    transform: rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  5% {
+    transform: rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  6% {
+    opacity: 1; }
+  10% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; } }
+
+@keyframes spin-out-col-3 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  10% {
+    transform: translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2); }
+  100% {
+    transform: translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+
+@keyframes spin-in-col-4 {
+  0% {
+    transform: translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  5% {
+    transform: translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
+    opacity: 0; }
+  6% {
+    opacity: 1; }
+  10% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1);
+    opacity: 1; } }
+
+@keyframes spin-out-col-4 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  10% {
+    transform: translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2); }
+  100% {
+    transform: translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+
 *,
 *::after,
 *::before {
@@ -180,23 +276,24 @@ body {
     height: 40rem;
     border-radius: 10px;
     overflow: hidden;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    position: relative;
+    background-color: orangered; }
   .menu-item-side__back {
     width: 56.4vw;
     height: 80.5vh;
     position: absolute;
-    top: -14.5vh;
-    left: 19vw;
     box-shadow: 0 0.2rem 5.5rem rgba(0, 0, 0, 0.3);
     border-radius: 6px;
     overflow: hidden;
     border-radius: 10px;
     opacity: 0;
-    background-color: #f7f7f7; }
+    display: none;
+    background-color: blue; }
     .menu-item-side__back--picture {
       height: 25rem; }
       .menu-item-side__back--picture-1 {
-        background-image: url(../img/steak-small.jpg);
+        background-image: url(../img/menu-items/mains/steak-small.jpg);
         background-size: cover; }
     .menu-item-side__back--ingredients {
       width: 50%;
@@ -221,37 +318,59 @@ body {
   .menu-item__picture {
     height: 20rem; }
     .menu-item__picture--1 {
-      background-image: url(../img/steak-small.jpg);
+      background-image: url(../img/menu-items/mains/steak-small.jpg);
       background-size: cover; }
-  .menu-item:active .menu-item-side__front {
-    animation: spin-out 8s ease-in-out; }
-  .menu-item:active .menu-item-side__back {
-    animation: spin-in 8s ease-out; }
 
-@keyframes spin-in {
-  0% {
-    transform: translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
-    opacity: 0; }
-  5% {
-    transform: translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(0.7);
-    opacity: 0; }
-  6% {
-    opacity: 1; }
-  10% {
-    transform: translateX(0) rotate(0) rotateY(0) scale(1);
-    opacity: 1; }
-  100% {
-    transform: translateX(0) rotate(0) rotateY(0) scale(1);
-    opacity: 1; } }
+.col-1-of-4 {
+  transition: all 8s ease-in-out; }
 
-@keyframes spin-out {
-  0% {
-    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
-  4% { }
-  10% {
-    transform: translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2); }
-  100% {
-    transform: translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+.column-1:active > .menu-item-side__front {
+  animation: spin-out-col-1 8s ease-in-out; }
+
+.column-1:active > .menu-item-side__back {
+  animation: spin-in-col-1 8s ease-out;
+  opacity: 1;
+  display: block; }
+
+.column-1 > .menu-item-side__back {
+  top: -14.5vh;
+  left: 19vw; }
+
+.column-2:active > .menu-item-side__front {
+  animation: spin-out-col-2 8s ease-in-out; }
+
+.column-2:active > .menu-item-side__back {
+  animation: spin-in-col-2 8s ease-out;
+  opacity: 1;
+  display: block; }
+
+.column-2 > .menu-item-side__back {
+  top: -14.5vh;
+  left: -5vw; }
+
+.column-3:active > .menu-item-side__front {
+  animation: spin-out-col-3 8s ease-in-out; }
+
+.column-3:active > .menu-item-side__back {
+  animation: spin-in-col-3 8s ease-out;
+  opacity: 1;
+  display: block; }
+
+.column-3 > .menu-item-side__back {
+  top: -14.5vh;
+  left: -29.3vw; }
+
+.column-4:active > .menu-item-side__front {
+  animation: spin-out-col-4 8s ease-in-out; }
+
+.column-4:active > .menu-item-side__back {
+  animation: spin-in-col-4 8s ease-out;
+  opacity: 1;
+  display: block; }
+
+.column-4 > .menu-item-side__back {
+  top: -14.5vh;
+  left: -52vw; }
 
 .move-down {
   margin-top: 30vh; }

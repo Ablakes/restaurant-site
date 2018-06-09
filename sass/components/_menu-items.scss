@@ -12,6 +12,9 @@
             border-radius: 10px;
             overflow: hidden;
             backface-visibility: hidden;
+            position: relative;
+
+            background-color: orangered;
         }
 
         &__back {
@@ -21,22 +24,23 @@
             width: 56.4vw;
             height: 80.5vh;
             position: absolute;
-            top: -14.5vh;
-            left: 19vw;
+
             box-shadow: 0 .2rem 5.5rem rgba($color-black, .3);
             border-radius: 6px;
             overflow: hidden;
             border-radius: 10px;
             opacity: 0;
+            display: none;
             
-            background-color: $color-grey-light-1;
+            // background-color: $color-grey-light-1;
+            background-color: blue;
 
             &--picture {
 
                 height: 25rem;
 
                 &-1 {
-                    background-image: url(../img/steak-small.jpg);
+                    background-image: url(../img/menu-items/mains/steak-small.jpg);
                     background-size: cover;
                 }
             }
@@ -72,65 +76,100 @@
         height: 20rem;
 
         &--1 {
-            background-image: url(../img/steak-small.jpg);
+            background-image: url(../img/menu-items/mains/steak-small.jpg);
             background-size: cover;
         }
     }
+}
 
-    &:hover {
-        
+.col-1-of-4 {
+    transition: all 8s ease-in-out;
+}
+
+.column-1 {
+
+    
+
+    &:active > .menu-item-side__front {
+        animation: spin-out-col-1 8s ease-in-out;
     }
 
-    &:active &-side__front {
-        animation: spin-out 8s ease-in-out;
+    &:active > .menu-item-side__back {
+        animation: spin-in-col-1 8s ease-out;
+        opacity: 1;
+        display: block;
+    }
+
+    & > .menu-item-side__back {
+        top: -14.5vh;
+        left: 19vw;
+    }
+}
+
+.column-2 {
+
+    &:active > .menu-item-side__front {
+        animation: spin-out-col-2 8s ease-in-out;
     //    animation: spin 3s ease-in-out;
 
     }
 
-    &:active &-side__back {
-        animation: spin-in 8s ease-out;
+    &:active > .menu-item-side__back {
+        animation: spin-in-col-2 8s ease-out;
+        opacity: 1;
+        display: block;
+    }
+
+    & > .menu-item-side__back {
+        top: -14.5vh;
+        left: -5vw;;
     }
 }
 
-@keyframes spin-in {
-    0% {
-        // opacity: 0;
-        transform:  translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
+.column-3 {
+
+    &:active > .menu-item-side__front {
+        animation: spin-out-col-3 8s ease-in-out;
+    //    animation: spin 3s ease-in-out;
+
     }
-    5% {
-        // opacity: 0;
-        transform:  translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    6% {
+
+    &:active > .menu-item-side__back {
+        animation: spin-in-col-3 8s ease-out;
         opacity: 1;
+        display: block;
     }
-    10% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
+
+    & > .menu-item-side__back {
+        top: -14.5vh;
+        left: -29.3vw;
     }
 }
 
-@keyframes spin-out {
-    0% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-    }
-    4% {
+.column-4 {
+
+    &:active > .menu-item-side__front {
+        animation: spin-out-col-4 8s ease-in-out;
+    //    animation: spin 3s ease-in-out;
 
     }
-    10% {
-        transform:  translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2);
+
+    &:active > .menu-item-side__back {
+        animation: spin-in-col-4 8s ease-out;
+        opacity: 1;
+        display: block;
     }
-    100% {
-        transform:  translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2);
+
+    & > .menu-item-side__back {
+        top: -14.5vh;
+        left: -52vw;
     }
 }
 
+
+
+
+// DELETE THIS SHIT EVENTUALLY
 
 .move-down {
     margin-top: 30vh;
