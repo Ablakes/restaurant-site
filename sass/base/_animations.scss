@@ -1,23 +1,9 @@
 @keyframes spin-in-col-1 {
     0% {
-        transform:  translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    5% {
-        // opacity: 0;
-        transform:  translateX(-18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    6% {
-        opacity: 1;
-    }
-    10% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
+        transform:  translateX(-18vw) rotate(-45deg) rotateX(-80deg) scale(.7);
     }
     100% {
         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
     }
 }
 
@@ -25,34 +11,47 @@
     0% {
         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
     }
-    10% {
-        transform:  translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2);
-    }
     100% {
         transform:  translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2);
+        display: none;
     }
 }
+
+// REVERSE COLUMN 1 ANIMATIONS
+
+@keyframes reverse-spin-in-col-1 {
+    0% {
+        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+    }
+    90% {
+        // helps prevent a funky glitch in the animation
+        opacity: 1;
+    }
+    100% {
+        transform:  translateX(-18vw) rotate(-45deg) rotateX(-80deg) scale(.7);
+        opacity: 0;
+    }
+}
+
+@keyframes reverse-spin-out-col-1 {
+    0% {
+        transform:  translateX(36vw) rotate(90deg) rotateY(-180deg) scale(2);
+        display: none;
+    }
+    100% {
+        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+    }
+}
+
+// END COLUMN 1
+
 
 @keyframes spin-in-col-2 {
     0% {
         transform:  translateX(-2vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    5% {
-        // opacity: 0;
-        transform:  translateX(-2vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    6% {
-        opacity: 1;
-    }
-    10% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
     }
     100% {
         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
     }
 }
 
@@ -60,80 +59,112 @@
     0% {
         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
     }
-    10% {
-        transform:  translateX(5vw) rotate(90deg) rotateY(-180deg) scale(2);
-    }
     100% {
         transform:  translateX(5vw) rotate(90deg) rotateY(-180deg) scale(2);
     }
 }
 
-@keyframes spin-in-col-3 {
+@keyframes reverse-spin-in-col-2 {
     0% {
-        transform: rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    5% {
-        // opacity: 0;
-        transform: rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    6% {
-        opacity: 1;
-    }
-    10% {
         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
     }
     100% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
+        transform:  translateX(-2vw) rotate(-45deg) rotateX(-90deg) scale(.7);
     }
 }
 
-@keyframes spin-out-col-3 {
+@keyframes reverse-spin-out-col-2 {
     0% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-    }
-    10% {
-        transform:  translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2);
+        transform:  translateX(5vw) rotate(90deg) rotateY(-180deg) scale(2);
     }
     100% {
-        transform:  translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2);
+        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
     }
 }
 
-@keyframes spin-in-col-4 {
-    0% {
-        transform:  translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    5% {
-        // opacity: 0;
-        transform:  translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
-        opacity: 0;
-    }
-    6% {
-        opacity: 1;
-    }
-    10% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-        opacity: 1;
-    }
-}
 
-@keyframes spin-out-col-4 {
-    0% {
-        transform:  translateX(0) rotate(0) rotateY(0) scale(1);
-    }
-    10% {
-        transform:  translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2);
-    }
-    100% {
-        transform:  translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2);
-    }
-}
+
+
+
+
+// @keyframes spin-in-col-3 {
+//     0% {
+//         transform: rotate(-45deg) rotateX(-90deg) scale(.7);
+//         opacity: 0;
+//     }
+//     5% {
+//         // opacity: 0;
+//         transform: rotate(-45deg) rotateX(-90deg) scale(.7);
+//         opacity: 0;
+//     }
+//     6% {
+//         opacity: 1;
+//     }
+//     10% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes spin-out-col-3 {
+//     0% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//     }
+//     10% {
+//         transform:  translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2);
+//     }
+//     100% {
+//         transform:  translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2);
+//     }
+// }
+
+// @keyframes spin-in-col-4 {
+//     0% {
+//         transform:  translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
+//         opacity: 0;
+//     }
+//     5% {
+//         // opacity: 0;
+//         transform:  translateX(18vw) rotate(-45deg) rotateX(-90deg) scale(.7);
+//         opacity: 0;
+//     }
+//     6% {
+//         opacity: 1;
+//     }
+//     10% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//         opacity: 1;
+//     }
+//     100% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes spin-out-col-4 {
+//     0% {
+//         transform:  translateX(0) rotate(0) rotateY(0) scale(1);
+//     }
+//     10% {
+//         transform:  translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2);
+//     }
+//     100% {
+//         transform:  translateX(-36vw) rotate(90deg) rotateY(-180deg) scale(2);
+//     }
+// }
+
+// @keyframes slideright {
+//     100% {
+//         transform: translateX(80vw);
+//     }
+// }
+
+// @keyframes slideleft {
+//     100% {
+//         transform: translateX(0);
+//     }
+// }
