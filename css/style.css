@@ -51,6 +51,42 @@
   100% {
     transform: translateX(0) rotate(0) rotateY(0) scale(1); } }
 
+@keyframes spin-in-col-3 {
+  0% {
+    transform: rotate(-45deg) rotateX(-90deg) scale(0.7); }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); } }
+
+@keyframes spin-out-col-3 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  100% {
+    transform: translateX(-20vw) rotate(90deg) rotateY(-180deg) scale(2); } }
+
+@keyframes reverse-spin-in-col-3 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  100% {
+    transform: translateX(6vw) rotate(-45deg) rotateX(-95deg) scale(0.7); } }
+
+@keyframes spin-in-col-4 {
+  0% {
+    transform: translateX(18vw) rotate(-45deg) rotateX(-95deg) scale(0.7); }
+  100% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); } }
+
+@keyframes spin-out-col-4 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  100% {
+    transform: translateX(-36vw) rotate(90deg) rotateY(-200deg) scale(2); } }
+
+@keyframes reverse-spin-in-col-4 {
+  0% {
+    transform: translateX(0) rotate(0) rotateY(0) scale(1); }
+  100% {
+    transform: translateX(18vw) rotate(-45deg) rotateX(-95deg) scale(0.7); } }
+
 *,
 *::after,
 *::before {
@@ -163,8 +199,8 @@ body {
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.336); }
 
 .btn:hover {
-  transform: translateY(-0.2rem) scale(1.1);
-  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2); }
+  transform: translateY(-0.2rem) scale(1.05);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15); }
 
 .btn:active {
   transform: translateY(0);
@@ -285,32 +321,13 @@ body {
   top: -14.5vh;
   left: 19vw; }
 
-.column-2:active > .menu-item-side__back {
-  display: none; }
-
 .column-2 > .menu-item-side__back {
   top: -14.5vh;
   left: -5vw; }
 
-.column-3:active > .menu-item-side__front {
-  animation: spin-out-col-3 8s ease-in-out; }
-
-.column-3:active > .menu-item-side__back {
-  animation: spin-in-col-3 8s ease-out;
-  opacity: 1;
-  display: block; }
-
 .column-3 > .menu-item-side__back {
   top: -14.5vh;
   left: -29.3vw; }
-
-.column-4:active > .menu-item-side__front {
-  animation: spin-out-col-4 8s ease-in-out; }
-
-.column-4:active > .menu-item-side__back {
-  animation: spin-in-col-4 8s ease-out;
-  opacity: 1;
-  display: block; }
 
 .column-4 > .menu-item-side__back {
   top: -14.5vh;
