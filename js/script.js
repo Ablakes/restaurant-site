@@ -1,4 +1,6 @@
 var
+    menu = document.querySelector('.section-menu'),
+
     column1 = document.querySelector('.column-1'),
     column2 = document.querySelector('.column-2'),
     column3 = document.querySelector('.column-3'),
@@ -19,10 +21,29 @@ var
     col3BtnFront = document.querySelector('.column-3 > .menu-item-side > .btn--secondary'),
     col4BtnFront = document.querySelector('.column-4 > .menu-item-side > .btn--secondary'),
 
-    col1BtnBack = document.querySelector('.column-1 > .menu-item-side__back > .btn--secondary'),
-    col2BtnBack = document.querySelector('.column-2 > .menu-item-side__back > .btn--secondary'),
-    col3BtnBack = document.querySelector('.column-3 > .menu-item-side__back > .btn--secondary'),
-    col4BtnBack = document.querySelector('.column-4 > .menu-item-side__back > .btn--secondary');
+    col1BtnBack = document.querySelector('.column-1 > .menu-item-side__back > .btn--tertiary'),
+    col2BtnBack = document.querySelector('.column-2 > .menu-item-side__back > .btn--tertiary'),
+    col3BtnBack = document.querySelector('.column-3 > .menu-item-side__back > .btn--tertiary'),
+    col4BtnBack = document.querySelector('.column-4 > .menu-item-side__back > .btn--tertiary');
+
+
+
+// Super confusing and clusterfucked event delegation. Yayyy!
+
+// menu.onclick = function (event) {
+//     if (event.target.parentNode.parentNode.classList.contains('column-1')) {
+//         event.target.parentNode.style.animation = "spin-out-col-1 1s";
+//         event.target.parentNode.parentNode.childNodes[3].style.animation = "spin-in-col-1 .5s ease-out";
+//         event.target.parentNode.parentNode.style.zIndex = "10";
+//         setTimeout(function () {
+//             event.target.parentNode.parentNode.childNodes[3].style.display = "block";
+//         }, 320);
+//         setTimeout(function () {
+//             event.target.parentNode.style.display = "none";
+//             event.target.parentNode.parentNode.childNodes[3].style.transform = "translateX(0) rotate(0) rotateY(0) scale(1)";
+//         }, 400);
+//     }
+// }
 
 
 // COLUMN 1 FLIP CARD TO CENTER

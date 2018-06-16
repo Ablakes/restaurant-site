@@ -198,6 +198,16 @@ body {
   border-radius: 100px;
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.336); }
 
+.btn--tertiary {
+  font-size: 30px;
+  color: white;
+  float: right;
+  padding: 2em; }
+  .btn--tertiary::after {
+    content: "";
+    clear: both;
+    display: table; }
+
 .btn:hover {
   transform: translateY(-0.2rem) scale(1.05);
   box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15); }

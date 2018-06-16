@@ -40,6 +40,14 @@
         
     }
 
+    &--tertiary {
+        font-size: 30px;
+        color: white;
+        float: right;
+        padding: 2em;
+        @include clearfix;
+    }
+
     &:hover {
         transform: translateY(-.2rem) scale(1.05);
         box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, .15);
